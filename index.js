@@ -19,7 +19,9 @@ function destructivelyRemoveFirstKitten(){
 }
 
 function appendKitten(name){
-  kittens.push(name)
+  var shallowCopy = kittens.slice();
+  shallowCopy.push(name)
+  return kittens
 }
 
 function prependKitten(name){
