@@ -19,19 +19,26 @@ function destructivelyRemoveFirstKitten(){
 }
 
 function appendKitten(name){
-  var shallowCopy = kittens.slice();
-  shallowCopy.push(name)
-  return kittens
+  var copy = kittens.slice();
+  copy.push(name)
+  return copy
+
 }
 
 function prependKitten(name){
-  kittens.unshift(name)
+  var copy = kittens.slice();
+  copy.unshift(name)
+  return copy
 }
 
 function removeLastKitten(){
-  kittens.pop()
+  var copy = kittens.slice();
+  copy.pop()
+  return copy
 }
 
 function removeFirstKitten(){
-  kittens.shift()
+  var copy = kittens.slice();
+  copy.shift()
+  return copy
 }
