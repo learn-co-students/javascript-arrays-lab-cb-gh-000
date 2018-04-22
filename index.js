@@ -1,40 +1,35 @@
-const app = "I don't do much."
-const app = "I don't do much."
-kittens = ['Milo', 'Otis', 'Garfield']
+var kittens = ['Milo', 'Otis', 'Garfield']
 
 function destructivelyAppendKitten(name) {
-  kittens = kittens.push(name)
+  kittens.push(name)
 }
 
 function destructivelyPrependKitten(name) {
-  kittens = kittens.unshift(name)
+  kittens.unshift(name)
+}
+
+function destructivelyRemoveFirstKitten() {
+  kittens.shift()
 }
 
 function destructivelyRemoveLastKitten(name) {
-  kittens = kittens.pop(name)
+  kittens.pop()
 }
 
-function destructivelyRemoveLastKitten(name) {
-  kittens = kittens.pop(name)
-}
-
-function destructivelyRemoveFirstKitten(name) {
-  kittens = kittens.unshift(name)
-}
 
 function appendKitten(name) {
-  return kittens.push(name)
+  return [...kittens, name]
 }
 
 function prependKitten(name) {
-  return kittens.unshift(name)
+  return [name, ...kittens]
 }
 
 
 function removeLastKitten(name) {
-  return kittens.pop(name)
+  return kittens.slice(0, kittens.length - 1)
 }
 
 function removeFirstKitten(name) {
-  return kittens.unshift(name)
+  return kittens.slice(1)
 }
