@@ -32,3 +32,8 @@ function removeLastKitten(){
   var ne = kittens.slice();
   return ne.pop()
 }
+
+function removeFirstKitten(){
+  var ne = kittens.slice();
+  return ne.shift()
+}
