@@ -22,3 +22,13 @@ function appendKitten(name){
   ne.push(name)
   return ne
 }
+
+function prependKitten(name){
+  var ne = kittens.slice();
+  return ne.unshift(name)
+}
+
+function removeLastKitten(){
+  var ne = kittens.slice();
+  return ne.pop()
+}
